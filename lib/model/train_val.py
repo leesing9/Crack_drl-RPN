@@ -453,7 +453,7 @@ class SolverWrapper(object):
       self.snapshot(sess, iter + snapshot_add)
     
     saver = tf.train.Saver(tf.global_variables())
-    writer = tf.summary.FileWriter('/tmp/tf_logs', saver.graph)
+    writer = tf.summary.FileWriter('/tmp/tf_logs', sess.graph)
     
 
 def get_training_roidb(imdb):
