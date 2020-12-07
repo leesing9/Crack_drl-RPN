@@ -19,6 +19,15 @@ EXTRA_ARGS_SLUG=${EXTRA_ARGS// /_}
 NET=vgg16
 
 case ${DATASET} in
+  customdataset)
+    TRAIN_IMDB="customdataset_trainval"
+    TEST_IMDB="customdataset_test"
+    STEPSIZE="[50000]"
+    DRL_RPN_STEPSIZE="90000"
+    NBR_CLASSES="5"
+    ANCHORS="[8,16,32]"
+    RATIOS="[0.5,1,2]"
+    ;;
   pascal_voc)
     TRAIN_IMDB="voc_2007_trainval"
     TEST_IMDB="voc_2007_test"
@@ -66,24 +75,24 @@ esac
 # is used for loading existing weights
 case ${DATASET} in
   pascal_voc_0712_test)
-    SAVE_PATH=/home/deepinspection/drl-rpn/drl-rpn-tf/data/drl-rpn-voc2007-2012-trainval+2007test/
+    SAVE_PATH=/home/tmdocker/host/drl-rpn/drl-rpn-tf/data/drl-rpn-voc2007-2012-trainval+2007test/
     case ${USE_POST} in
       0)
-        WEIGHTS_PATH=/home/deepinspection/drl-rpn/drl-rpn-tf/data/fr-rcnn-voc2007-2012-trainval+2007test/vgg16_2012_faster_rcnn_iter_180000.ckpt
+        WEIGHTS_PATH=/home/tmdocker/host/drl-rpn/drl-rpn-tf/data/fr-rcnn-voc2007-2012-trainval+2007test/vgg16_2012_faster_rcnn_iter_180000.ckpt
         ;;
       *)
-        WEIGHTS_PATH=/home/deepinspection/drl-rpn/drl-rpn-tf/data/drl-rpn-voc2007-2012-trainval+2007test/vgg16_2012_drl_rpn_iter_110000.ckpt
+        WEIGHTS_PATH=/home/tmdocker/host/drl-rpn/drl-rpn-tf/data/drl-rpn-voc2007-2012-trainval+2007test/vgg16_2012_drl_rpn_iter_110000.ckpt
         ;;
     esac
     ;;
   *)
-    SAVE_PATH=/home/deepinspection/drl-rpn/drl-rpn-tf/data/output-weights/drl-rpn-voc2007-2012-trainval/
+    SAVE_PATH=/home/tmdocker/host/drl-rpn/drl-rpn-tf/data/output-weights/drl-rpn-voc2007-2012-trainval/
     case ${USE_POST} in
       0)
-        WEIGHTS_PATH=/home/deepinspection/drl-rpn/drl-rpn-tf/data/fr-rcnn-voc2007-2012-trainval/vgg16_faster_rcnn_iter_180000.ckpt
+        WEIGHTS_PATH=/home/tmdocker/host/drl-rpn/drl-rpn-tf/data/fr-rcnn-voc2007-2012-trainval/vgg16_faster_rcnn_iter_180000.ckpt
         ;;
       *)
-        WEIGHTS_PATH=/home/deepinspection/drl-rpn/drl-rpn-tf/data/drl-rpn-voc2007-2012-trainval/vgg16_drl_rpn_iter_110000.ckpt
+        WEIGHTS_PATH=/home/tmdocker/host/drl-rpn/drl-rpn-tf/data/drl-rpn-voc2007-2012-trainval/vgg16_drl_rpn_iter_110000.ckpt
         ;;
     esac
     ;;
