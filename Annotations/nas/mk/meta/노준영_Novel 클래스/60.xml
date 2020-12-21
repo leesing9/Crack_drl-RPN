@@ -1,0 +1,35 @@
+<annotation>
+  <folder>nas/mk/meta/노준영</folder>
+  <filename>nas/mk/meta/노준영_Novel 클래스/60.png</filename>
+  <source>
+    <database>Unknown</database>
+    <annotation>Unknown</annotation>
+    <image>Unknown</image>
+  </source>
+  <size>
+    <width>512</width>
+    <height>512</height>
+    <depth></depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>C14</name>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>356.43</xmin>
+      <ymin>245.74</ymin>
+      <xmax>403.83</xmax>
+      <ymax>304.36</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>C11</name>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>238.57</xmin>
+      <ymin>246.36</ymin>
+      <xmax>319.01</xmax>
+      <ymax>326.19</ymax>
+    </bndbox>
+  </object>
+</annotation>
